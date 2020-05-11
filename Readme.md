@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Алексей Морозов](https://up.htmlacademy.ru/htmlcss/28/user/593913).
-* Наставник: `Дмитрий Половков`.(https://htmlacademy.ru/profile/id183245)
+* Наставник: [Дмитрий Половков](https://htmlacademy.ru/profile/id183245).
 
 ---
 
