@@ -52,6 +52,61 @@
 
           <section>
               <h2>Отбор по параметрам</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <fieldset>
+                  <legend>Сортировка:</legend>
+                  <label for="sort">Сортировка:</label>
+                  <select name="sort" id="sort">
+                    <option value="popular">по популярности</option>
+                    <option value="cheap">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="fatness">по жирности</option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <legend>Цена:</legend>
+                  <label for="low_price">
+                    <input type="text" id="low_price" value="100 руб.">-
+                  </label>
+                  <label for="high_price">
+                    <input type="text" id="high_price" value="500 руб.">
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Жирность:</legend>
+                    <label for="zero">
+                      <input type="radio" name="fatness" id="zero" value="0">0%
+                    </label>
+                    <label for="until_10">
+                      <input type="radio" name="fatness" id="until_10" value="until_10" checked>до 10%
+                    </label>
+                    <label for="until_30">
+                      <input type="radio" name="fatness" id="until_30" value="until_30">до 30%
+                    </label>
+                    <label for="above_30">
+                      <input type="radio" name="fatness" id="above_30" value="above_30">выше 30%
+                    </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Наполнители:</legend>
+                    <label for="chocolate">
+                      <input type="checkbox" id="chocolate" name="chocolate" checked>шоколадные
+                    </label>
+                    <label for="sugar_powder">
+                      <input type="checkbox" id="sugar_powder" name="sugar_powder" checked>сахарные присыпки
+                    </label>
+                    <label for="fruits">
+                      <input type="checkbox" id="fruits" name="fruits">фрукты
+                    </label>
+                    <label for="syrups">
+                      <input type="checkbox" id="syrups" name="syrups">сиропы
+                    </label>
+                    <label for="jams">
+                      <input type="checkbox" id="jams" name="jams">джемы
+                    </label>
+                </fieldset>
+                <button type="submit">Применить</button>
+              </form>
           </section>
 
           <section>
@@ -168,7 +223,7 @@
             </ul>
             
             <ul>
-              <li><a href="">&lt;</a></li>
+              <li><a>&lt;</a></li>
               <li><a>1</a></li>
               <li><a href="">2</a></li>
               <li><a href="">3</a></li>
@@ -181,20 +236,19 @@
       </main>
 
       <footer>
-        
-          <ul class="footer_social">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Vkontakte</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-          </ul>
+        <ul class="footer_social">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Vkontakte</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
 
-          <ul class="footer_information">
-            <li><a href="#">Для поставщиков</a></li>
-            <li><a href="#">О производстве</a></li>
-            <li><a href="#">Наши документы</a></li>
-            <li><a href="#">Экологические стандарты</a></li>
-          </ul>
+        <ul class="footer_information">
+          <li><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
+        </ul>
   
         <div class="footer_copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="https://via.placeholder.com/108x39" width="108"
