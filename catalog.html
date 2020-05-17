@@ -35,7 +35,7 @@
 
           <div>
             <p>С 10 до 20, ежедневно</p>
-            <p>8 812 450-25-25</p>
+            <a href="tel:+78124502525">8 812 450-25-25</a>
           </div>
 
           <ul>
@@ -55,7 +55,7 @@
               <form action="https://echo.htmlacademy.ru" method="post">
                 <fieldset>
                   <legend>Сортировка:</legend>
-                  <label for="sort"></label>
+                  <label for="sort">Сортировать:</label>
                   <select name="sort" id="sort">
                     <option value="popular">по популярности</option>
                     <option value="cheap">сначала недорогие</option>
@@ -66,10 +66,13 @@
                 <fieldset>
                   <legend>Цена:</legend>
                   <label for="low_price">
-                    <input type="text" id="low_price" value="100 руб.">-
+                    Минимальная цена
+                    <input type="text" id="low_price" value="100 руб.">
                   </label>
+                  <span> - </span>
                   <label for="high_price">
-                    <input type="text" id="high_price" value="500 руб.">
+                    Максимальная цена
+                    <input type="text" id="high_price" value="500 руб."> 
                   </label>
                 </fieldset>
                 <fieldset>
