@@ -42,10 +42,14 @@
       </ul>
       <div class="visually-hidden">
         <form action="http://echo.htmlacademy.ru" method="post">
-          <label for="user-nav__user-login-field">Введите Ваш E-email</label>
-          <input type="email" name="user-login" id="user-nav__user-login-field" placeholder="email@example.com" />
-          <label for="user-nav__user-password-field">Введите Ваш пароль</label>
-          <input type="password" name="user-password" id="user-nav__user-password-field" placeholder="**********" />
+          <p>
+            <label for="user-nav__user-login-field">Введите Ваш E-email</label>
+            <input type="email" name="user-login" id="user-nav__user-login-field" placeholder="email@example.com" />
+          </p>
+          <p>
+            <label for="user-nav__user-password-field">Введите Ваш пароль</label>
+            <input type="password" name="user-password" id="user-nav__user-password-field" placeholder="**********" />
+          </p>
           <button type="submit">Войти</button>
         </form>
         <a href="dev.html">Забыли пароль?</a>
@@ -126,48 +130,59 @@
         </fieldset>
         <fieldset>
           <legend>Цена:</legend>
-          <label for="low_price">
-            Минимальная цена
+          <p>
+            <label class="visually-hidden" for="low_price">Минимальная цена</label>
             <input type="text" id="low_price" value="100 руб." />
-          </label>
+          </p>
           <span> - </span>
-          <label for="high_price">
-            Максимальная цена
+          <p>
+            <label class="visually-hidden" for="high_price">Максимальная цена</label>
             <input type="text" id="high_price" value="500 руб." />
-          </label>
+          </p>
         </fieldset>
         <fieldset>
           <legend>Жирность:</legend>
-          <label for="zero">
-            <input type="radio" name="fatness" id="zero" value="0" />0%
-          </label>
-          <label for="until_10">
-            <input type="radio" name="fatness" id="until_10" value="until_10" checked />до 10%
-          </label>
-          <label for="until_30">
-            <input type="radio" name="fatness" id="until_30" value="until_30" />до 30%
-          </label>
-          <label for="above_30">
-            <input type="radio" name="fatness" id="above_30" value="above_30" />выше 30%
-          </label>
+          <p>
+            <input type="radio" name="fatness" id="zero" value="0" />
+            <label for="zero">0%</label>
+          </p>
+          <p>
+            <input type="radio" name="fatness" id="until_10" value="until_10" checked />
+            <label for="until_10">до 10%</label>
+          </p>
+
+          <p>
+            <input type="radio" name="fatness" id="until_30" value="until_30" />
+            <label for="until_30">до 30%</label>
+          </p>
+
+          <p>
+            <input type="radio" name="fatness" id="above_30" value="above_30" />
+            <label for="above_30">выше 30%</label>
+          </p>
         </fieldset>
         <fieldset>
           <legend>Наполнители:</legend>
-          <label for="chocolate">
-            <input type="checkbox" id="chocolate" name="chocolate" checked />шоколадные
-          </label>
-          <label for="sugar_powder">
-            <input type="checkbox" id="sugar_powder" name="sugar_powder" checked />сахарные присыпки
-          </label>
-          <label for="fruits">
-            <input type="checkbox" id="fruits" name="fruits" />фрукты
-          </label>
-          <label for="syrups">
-            <input type="checkbox" id="syrups" name="syrups" />сиропы
-          </label>
-          <label for="jams">
-            <input type="checkbox" id="jams" name="jams" />джемы
-          </label>
+          <p>
+            <input type="checkbox" id="chocolate" name="chocolate" checked />
+            <label for="chocolate">шоколадные</label>
+          </p> 
+          <p>
+            <input type="checkbox" id="sugar_powder" name="sugar_powder" checked />
+            <label for="sugar_powder">сахарные присыпки</label>
+          </p>
+          <p>
+            <input type="checkbox" id="fruits" name="fruits" />
+            <label for="fruits">фрукты</label>
+          </p>
+          <p>
+            <input type="checkbox" id="syrups" name="syrups" />
+            <label for="syrups">сиропы</label>
+          </p>
+          <p>
+            <input type="checkbox" id="jams" name="jams" />
+            <label for="jams">джемы</label>
+          </p>
         </fieldset>
         <button type="submit">Применить</button>
       </form>

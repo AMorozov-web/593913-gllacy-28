@@ -42,10 +42,14 @@
       </ul>
       <div class="visually-hidden">
         <form action="http://echo.htmlacademy.ru" method="post">
-          <label for="user-nav__user-login-field">Введите Ваш E-email</label>
-          <input type="email" name="user-login" id="user-nav__user-login-field" placeholder="email@example.com">
-          <label for="user-nav__user-password-field">Введите Ваш пароль</label>
-          <input type="password" name="user-password" id="user-nav__user-password-field" placeholder="**********">
+          <p>
+            <label for="user-nav__user-login-field">Введите Ваш E-email</label>
+            <input type="email" name="user-login" id="user-nav__user-login-field" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="user-nav__user-password-field">Введите Ваш пароль</label>
+            <input type="password" name="user-password" id="user-nav__user-password-field" placeholder="**********">
+          </p>
           <button type="submit">Войти</button>
         </form>
         <a href="dev.html">Забыли пароль?</a>
@@ -190,8 +194,10 @@
         всякой ненужной ерунды. Честно =)
       </p>
       <form action="http://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="subscribe_field">Ваш E-mail</label>
-        <input type="email" name="subscribe_field" id="subscribe_field" placeholder="email@example.com">
+        <p>
+          <label class="visually-hidden" for="subscribe_field">Ваш E-mail</label>
+          <input type="email" name="subscribe_field" id="subscribe_field" placeholder="email@example.com">
+        </p>
         <button type="submit">Отправить</button>
       </form>
     </section>
@@ -209,19 +215,27 @@
       </p>
       <p>
         Для заказов по телефону:<br />
-        <a href="tel:+78124502525" aria-label="Звоните нам с 10 до 20 ежедневно">8 812 450-25-25</a><br />(с 10 до 20 ежедневно)
+        <a href="tel:+78124502525" aria-label="Звоните нам с 10 до 20 ежедневно">8 812 450-25-25</a><br />(с 10 до 20
+        ежедневно)
       </p>
       <a href="feedback.html">Форма обратной связи</a>
       <div class="visually-hidden">
         <p>Мы обязательно вам ответим!</p>
         <button type="button">Закрыть форму</button>
         <form action="http://echo.htmlacademy.ru" method="post">
-          <label for="feedback-form__user-name-field">Имя и Фамилия</label>
-          <input type="text" name="user-name" id="feedback-form__user-name-field" placeholder="Имя Фамилия">
-          <label for="feedback-form__user-email-field">Ваш e-mail</label>
-          <input type="email" name="user-mail" id="feedback-form__user-email-field" placeholder="email@example.com">
-          <label for="feedback-form__user-comment-field">Ваши вопросы и пожелания</label>
-          <input type="text" name="user-comment" id="feedback-form__user-comment-field" placeholder="В свободной форме">
+          <p>
+            <label class="visually-hidden" for="feedback-form__user-name-field">Имя и Фамилия</label>
+            <input type="text" name="user-name" id="feedback-form__user-name-field" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label class="visually-hidden" for="feedback-form__user-email-field">Ваш e-mail</label>
+            <input type="email" name="user-mail" id="feedback-form__user-email-field" placeholder="email@example.com">
+          </p>
+          <p>
+            <label class="visually-hidden" for="feedback-form__user-comment-field">Ваши вопросы и пожелания</label>
+            <input type="text" name="user-comment" id="feedback-form__user-comment-field"
+              placeholder="В свободной форме">
+          </p>
           <button type="submit">Отправить</button>
         </form>
       </div>
