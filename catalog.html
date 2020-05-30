@@ -49,7 +49,9 @@
         <ul class="site-nav__user-menu">
           <li class="site-nav__user-menu-item">
             <a class="site-nav__user-menu--login-link" href="dev.html">
-              Вход
+              <p class="user-menu__link-descr">
+                Вход
+              </p>
             </a>
           </li>
         </ul>
@@ -131,50 +133,58 @@
       <section class="catalog__filters">
         <h2 class="visually-hidden">Отбор по параметрам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="filters__fieldset">
-            <legend>Сортировка:</legend>
+          <fieldset class="filters__sort">
+            <legend>
+              Сортировка:</legend>
             <label class="visually-hidden" for="sort">Сортировать:</label>
-            <select name="sort" id="sort">
+            <select class="filters__sort--select" name="sort" id="sort">
               <option value="popular">по популярности</option>
               <option value="cheap">сначала недорогие</option>
               <option value="expensive">сначала дорогие</option>
               <option value="fatness">по жирности</option>
             </select>
           </fieldset>
-          <fieldset>
+          <fieldset class="filters__price">
             <legend>Цена:</legend>
             <p>
               <label class="visually-hidden" for="low_price">Минимальная цена</label>
               <input type="text" id="low_price" value="100" />
-              руб.
+              &#8381;
             </p>
             <span> - </span>
             <p>
               <label class="visually-hidden" for="high_price">Максимальная цена</label>
               <input type="text" id="high_price" value="500" />
-              руб.
+              &#8381;
             </p>
+            <div class="price__dual-range">
+              <div class="dual-range__scale">
+                <div class="dual-range__scrollbar"></div>
+                <div class=" dual-range__toggle dual-range__toggle--min"></div>
+                <div class="dual-range__toggle dual-range__toggle--max"></div>
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filters__fatness">
             <legend>Жирность:</legend>
-            <p>
-              <input type="radio" name="fatness" id="zero" value="0" />
-              <label for="zero">0%</label>
-            </p>
-            <p>
-              <input type="radio" name="fatness" id="until_10" value="until_10" checked />
-              <label for="until_10">до 10%</label>
-            </p>
-
-            <p>
-              <input type="radio" name="fatness" id="until_30" value="until_30" />
-              <label for="until_30">до 30%</label>
-            </p>
-
-            <p>
-              <input type="radio" name="fatness" id="above_30" value="above_30" />
-              <label for="above_30">выше 30%</label>
-            </p>
+            <div class="fatness__wrapper">
+              <p>
+                <input class="visually-hidden fatness__input" type="radio" name="fatness" id="zero" value="0" />
+                <label class="fatness__label" for="zero">0%</label>
+              </p>
+              <p>
+                <input class="visually-hidden fatness__input" type="radio" name="fatness" id="until_10" value="until_10" checked />
+                <label class="fatness__label" for="until_10">до 10%</label>
+              </p>
+              <p>
+                <input class="visually-hidden fatness__input" type="radio" name="fatness" id="until_30" value="until_30" />
+                <label class="fatness__label" for="until_30">до 30%</label>
+              </p>
+              <p>
+                <input class="visually-hidden fatness__input" type="radio" name="fatness" id="above_30" value="above_30" />
+                <label class="fatness__label" for="above_30">выше 30%</label>
+              </p>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
