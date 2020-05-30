@@ -186,30 +186,32 @@
               </p>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filters__fillers">
             <legend>Наполнители:</legend>
-            <p>
-              <input type="checkbox" id="chocolate" name="chocolate" checked />
-              <label for="chocolate">шоколадные</label>
-            </p>
-            <p>
-              <input type="checkbox" id="sugar_powder" name="sugar_powder" checked />
-              <label for="sugar_powder">сахарные присыпки</label>
-            </p>
-            <p>
-              <input type="checkbox" id="fruits" name="fruits" />
-              <label for="fruits">фрукты</label>
-            </p>
-            <p>
-              <input type="checkbox" id="syrups" name="syrups" />
-              <label for="syrups">сиропы</label>
-            </p>
-            <p>
-              <input type="checkbox" id="jams" name="jams" />
-              <label for="jams">джемы</label>
-            </p>
+            <div class="fillers__wrapper">
+              <p>
+                <input class="visually-hidden fillers__input" type="checkbox" id="chocolate" name="chocolate" checked />
+                <label class="fillers__label" for="chocolate">шоколадные</label>
+              </p>
+              <p>
+                <input class="visually-hidden fillers__input" type="checkbox" id="sugar_powder" name="sugar_powder" checked />
+                <label class="fillers__label" for="sugar_powder">сахарные присыпки</label>
+              </p>
+              <p>
+                <input class="visually-hidden fillers__input" type="checkbox" id="fruits" name="fruits" />
+                <label class="fillers__label" for="fruits">фрукты</label>
+              </p>
+              <p>
+                <input class="visually-hidden fillers__input" type="checkbox" id="syrups" name="syrups" />
+                <label class="fillers__label" for="syrups">сиропы</label>
+              </p>
+              <p>
+                <input class="visually-hidden fillers__input" type="checkbox" id="jams" name="jams" />
+                <label class="fillers__label" for="jams">джемы</label>
+              </p>
+            </div>
           </fieldset>
-          <button type="submit">Применить</button>
+          <button class="filters__button" type="submit">Применить</button>
         </form>
       </section>
 

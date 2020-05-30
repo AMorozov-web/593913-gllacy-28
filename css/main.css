@@ -4,6 +4,7 @@
     --color-white: #ffffff;
     --color-popup: #323232;
     --color-post: #5a5a5a;
+    --filters-button: #696969;
     --bgcolor-basic: rgba(255, 255, 255, 0.2);
     --bgcolor-waffle: #EDDDBE;
     --bgcolor-btn-slider-hover: rgba(255, 255, 255, 0.4);
@@ -405,6 +406,7 @@ h1, h2, h3, p {
 .filters__sort--select:focus {
   background-image: url(../img/sort_arrow_hovered.svg);
   color: var(--color-popup);
+  cursor: pointer;
 }
 
 .filters__price p,
@@ -466,6 +468,11 @@ h1, h2, h3, p {
   border-radius: 50%;
 }
 
+.dual-range__toggle:hover {
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+}
+
 .dual-range__toggle--min {
   left: 5%;
 }
@@ -511,6 +518,80 @@ h1, h2, h3, p {
 
 .fatness__input:checked + .fatness__label::before {
   background-image: url(../img/radio_checked.svg);
+}
+
+.fatness__input:disabled + .fatness__label::before {
+  opacity: .4;
+}
+
+.fillers__wrapper {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 711px;
+  min-height: 36px;
+  background-color: var(--bgcolor-basic);
+  border-radius: 20px;
+}
+
+.fillers__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.fillers__input + .fillers__label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -30px;
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-image: url(../img/checkbox.svg);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: .8;
+}
+
+.fillers__input:hover + .fillers__label::before,
+.fillers__input:focus + .fillers__label::before {
+  opacity: 1;
+}
+
+.fillers__input:checked + .fillers__label::before {
+  background-image: url(../img/checkbox-checked.svg);
+  background-size: 24px 20px;
+}
+
+.fillers__input:disabled + .fillers__label::before {
+  opacity: .4;
+}
+
+.filters__button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 144px;
+  padding-bottom: 3px;
+  min-height: 36px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--bgcolor-basic);
+  border: 2px solid var(--color-white);
+  border-radius: 20px;
+}
+
+.filters__button:hover,
+.filters__button:focus {
+  outline: none;
+  color: var(--color-popup);
+  background-color: var(--color-white);
+  border: none;
+}
+
+.filters__button:active {
+  box-shadow: inset 0px 2px 1px var(--filters-button);
 }
 
 /* Catalog */
