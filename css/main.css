@@ -97,8 +97,8 @@ h1, h2, h3, p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.site-nav__main-menu a:hover,
-.site-nav__main-menu a:focus {
+.site-nav__main-menu a[href]:hover,
+.site-nav__main-menu a[href]:focus {
   outline: none;
   padding-top: 9px;
   padding-bottom: 11px;
@@ -120,7 +120,7 @@ h1, h2, h3, p {
   border-radius: 26px;
 }
 
-.site-nav__main-menu a:active {
+.site-nav__main-menu a[href]:active {
   background-color: var(--bg-link-active);
   box-shadow: inset 0px 2px 1px #696969;
 }
@@ -171,7 +171,7 @@ h1, h2, h3, p {
   border-radius: 20px;
 }
 
-.site-nav__user-menu-item--login-link::before,
+.site-nav__user-menu--login-link::before,
 .site-nav__basket--empty::before,
 .site-nav__basket--filled::before {
   position: absolute;
@@ -184,7 +184,7 @@ h1, h2, h3, p {
   background-position: 0 0;
 }
 
-.site-nav__user-menu-item--login-link::before {
+.site-nav__user-menu--login-link::before {
   background-image: url(../img/login_icon.svg);
 }
 
@@ -353,6 +353,8 @@ h1, h2, h3, p {
   font-weight: 500;
 }
 
+
+
 /* Catalog */
 
 .catalog-page_title {
@@ -388,19 +390,30 @@ h1, h2, h3, p {
   border-radius: 4px;
 }
 
-.catalog__item:hover .catalog__item--button {
+.catalog__item--hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 20;
-  opacity: 1;
+  width: 61px;
+  height: 61px;
+  background-image: url(../img/hit_icon.svg);
 }
 
 .catalog__item--image {
+  position: relative;
   z-index: 10;
+  display: block;
+  width: 267px;
+  height: 267px;
 }
 
 .catalog__item--price {
   position: absolute;
-  top: 222px;
-  left: 13px;
+  top: 210px;
+  left: 0px;
+  z-index: 20;
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
@@ -413,19 +426,9 @@ h1, h2, h3, p {
   line-height: 35px;
 }
 
-.hits .catalog__item--descr::before {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 13px;
-  z-index: 20;
-  display: block;
-  width: 61px;
-  height: 61px;
-  background-image: url(../img/hit_icon.svg);
-}
-
 .catalog__item--descr {
+  position: relative;
+  z-index: 10;
   margin-top: 17px;
   font-weight: 500;
   line-height: 22px;
@@ -439,7 +442,6 @@ h1, h2, h3, p {
   position: absolute;
   top: 335px;
   left: 50%;
-  display: inline-block;
   width: 200px;
   margin-left: -100px;
   padding-top: 12px;
@@ -451,6 +453,11 @@ h1, h2, h3, p {
   font-weight: bold;
   border-radius: 50px;
   opacity: 0;
+}
+
+.catalog__item:hover .catalog__item--button {
+  z-index: 10;
+  opacity: 1;
 }
 
 /* Pagination */
