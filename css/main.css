@@ -282,6 +282,8 @@ h1, h2, h3, p {
 }
 
 .promo-slider__button {
+  display: inline-block;
+  box-sizing: border-box;
   width: 21px;
   height: 21px;
   margin-right: 8px;
@@ -297,7 +299,7 @@ h1, h2, h3, p {
   background-color: var(--bgcolor-btn-slider-hover);
 }
 
-.promo-slider__button--current {
+.radio:checked + .promo-slider__button {
   background-color: var(--color-white);
 }
 
