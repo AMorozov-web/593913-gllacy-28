@@ -13,110 +13,118 @@
   <div class="site-wrapper">
     <header class="site-header">
       <nav class="site-nav">
-        <a class="site-nav__site-logo" href="index.html">
-          <img src="img/main_logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»" />
-        </a>
-        <ul class="site-nav__main-menu">
-          <li>
-            <a class="link-current">Каталог</a>
-            <ul class="popup visually-hidden">
-              <li><a href="dev.html">Новинки</a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a href="dev.html">Щербеты</a></li>
-              <li><a href="dev.html">Фруктовый лед</a></li>
-              <li><a href="dev.html">Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a href="dev.html">Доставка и оплата</a></li>
-          <li><a href="dev.html">О компании</a></li>
-        </ul>
-
-        <a class="site-nav__search-link" href="search.html" aria-label="Поиск">
-          <svg class="search-icon" width="32" height="32"  xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M24 22.665l-4.922-4.932a6.144 6.144 0 00-.993-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L22.659 24 24 22.665zm-9.918-4.288a4.244 4.244 0 01-3.928-2.63 4.27 4.27 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.275 4.275 0 01-1.248 3.01 4.255 4.255 0 01-3.002 1.25z"
-              />
-          </svg>
-        </a>
-
-        <div class="visually-hidden">
-          <form action="http://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="user-nav__search-field">Введите Ваш запрос</label>
-            <input type="text" id="user-nav__search-field" name="search-field" placeholder="Что ищем?" />
-          </form>
+        <div class="site-nav__main-menu-wrapper">
+          <a class="site-nav__site-logo" href="index.html">
+            <img src="img/main_logo.svg" width="154" height="64" alt="Логотип магазина «Gllacy Shop»" />
+          </a>
+          <ul class="site-nav__main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--current">Каталог</a>
+              <ul class="popup visually-hidden">
+                <li><a href="dev.html">Новинки</a></li>
+                <li><a href="catalog.html">Сливочное</a></li>
+                <li><a href="dev.html">Щербеты</a></li>
+                <li><a href="dev.html">Фруктовый лед</a></li>
+                <li><a href="dev.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="dev.html">Доставка и оплата</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="dev.html">О компании</a>
+            </li>
+          </ul>
         </div>
 
-        <ul class="site-nav__user-menu">
-          <li class="site-nav__user-menu-item">
-            <a class="site-nav__user-menu--login-link" href="dev.html">
-              <p class="user-menu__link-descr">
-                Вход
+        <div class="site-nav__user-menu-wrapper">
+          <a class="user-menu__item user-menu__search-link" href="search.html" aria-label="Поиск">
+            <svg class="search-icon" width="32" height="32"  xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 22.665l-4.922-4.932a6.144 6.144 0 00-.993-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L22.659 24 24 22.665zm-9.918-4.288a4.244 4.244 0 01-3.928-2.63 4.27 4.27 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.275 4.275 0 01-1.248 3.01 4.255 4.255 0 01-3.002 1.25z"
+                />
+            </svg>
+          </a>
+  
+          <div class="visually-hidden">
+            <form action="http://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="user-nav__search-field">Введите Ваш запрос</label>
+              <input type="text" id="user-nav__search-field" name="search-field" placeholder="Что ищем?" />
+            </form>
+          </div>
+  
+          <ul class="user-menu__item user-menu__login-menu">
+            <li class="login-menu__item">
+              <a class="login-menu__item--login-link" href="dev.html">
+                <p class="login-menu__link-descr">
+                  Вход
+                </p>
+              </a>
+            </li>
+          </ul>
+          <div class="popup visually-hidden">
+            <form action="http://echo.htmlacademy.ru" method="post">
+              <p>
+                <label for="user-login-field">Введите Ваш E-email</label>
+                <input type="email" name="user-login" id="user-login-field" placeholder="email@example.com">
               </p>
-            </a>
-          </li>
-        </ul>
-        <div class="popup visually-hidden">
-          <form action="http://echo.htmlacademy.ru" method="post">
-            <p>
-              <label for="user-nav__user-login-field">Введите Ваш E-email</label>
-              <input type="email" name="user-login" id="user-nav__user-login-field" placeholder="email@example.com">
-            </p>
-            <p>
-              <label for="user-nav__user-password-field">Введите Ваш пароль</label>
-              <input type="password" name="user-password" id="user-nav__user-password-field" placeholder="**********">
-            </p>
-            <button type="submit">Войти</button>
-          </form>
-          <a href="dev.html">Забыли пароль?</a>
-          <a href="dev.html">Новая регистрация</a>
-        </div>
-
-        <a class="site-nav__basket--filled" href="dev.html" aria-label="Корзина">2 товара</a>
-        <div class="visually-hidden">
-          <table>
-            <caption class="visually-hidden">
-              Товары в корзине:
-            </caption>
-            <tbody>
-              <tr>
-                <td>
-                  <button type="button">Удалить товар</button>
-                </td>
-                <td>
-                  <img src="img/icecream_1_min.png" width="33" height="33" alt="" />
-                </td>
-                <td>
-                  <a href="dev.html">Пломбир с апельсиновым джемом</a>
-                </td>
-                <td>1,5 кг х <span>200 руб.</span></td>
-                <td>
-                  300 руб.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="button">Удалить товар</button>
-                </td>
-                <td>
-                  <img src="img/icecream_3_min.png" width="33" height="33" alt="" />
-                </td>
-                <td>
-                  <a href="dev.html">Клубничный пломбир с присыпкой из белого шоколада</a>
-                </td>
-                <td>1,5 кг х <span>300 руб.</span></td>
-                <td>
-                  450 руб.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Итого: 750 руб.</p>
-          <a href="dev.html">Оформить заказ</a>
-        </div>
-
-        <div class="site-header__shedule">
-          <p>с 10 до 20, ежедневно</p>
-          <a href="tel:+78124502525" aria-label="Звоните нам с 10 до 20 ежедневно">8 812 450-25-25</a>
+              <p>
+                <label for="user-password-field">Введите Ваш пароль</label>
+                <input type="password" name="user-password" id="user-password-field" placeholder="**********">
+              </p>
+              <button type="submit">Войти</button>
+            </form>
+            <a href="dev.html">Забыли пароль?</a>
+            <a href="dev.html">Новая регистрация</a>
+          </div>
+  
+          <a class="user-menu__item user-menu__basket--filled" href="dev.html" aria-label="Корзина">2 товара</a>
+          <div class="visually-hidden">
+            <table>
+              <caption class="visually-hidden">
+                Товары в корзине:
+              </caption>
+              <tbody>
+                <tr>
+                  <td>
+                    <button type="button">Удалить товар</button>
+                  </td>
+                  <td>
+                    <img src="img/icecream_1_min.png" width="33" height="33" alt="" />
+                  </td>
+                  <td>
+                    <a href="dev.html">Пломбир с апельсиновым джемом</a>
+                  </td>
+                  <td>1,5 кг х <span>200 руб.</span></td>
+                  <td>
+                    300 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button type="button">Удалить товар</button>
+                  </td>
+                  <td>
+                    <img src="img/icecream_3_min.png" width="33" height="33" alt="" />
+                  </td>
+                  <td>
+                    <a href="dev.html">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  </td>
+                  <td>1,5 кг х <span>300 руб.</span></td>
+                  <td>
+                    450 руб.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Итого: 750 руб.</p>
+            <a href="dev.html">Оформить заказ</a>
+          </div>
+  
+          <div class="user-menu__item user-menu__shedule">
+            <p>с 10 до 20, ежедневно</p>
+            <a href="tel:+78124502525" aria-label="Звоните нам с 10 до 20 ежедневно">8 812 450-25-25</a>
+          </div>
         </div>
 
         <ul class="site-breakrumbs">
@@ -160,8 +168,8 @@
             <div class="price__dual-range">
               <div class="dual-range__scale">
                 <div class="dual-range__scrollbar"></div>
-                <div class=" dual-range__toggle dual-range__toggle--min"></div>
-                <div class="dual-range__toggle dual-range__toggle--max"></div>
+                <div class=" dual-range__toggle dual-range__toggle--min" tabindex="0"></div>
+                <div class="dual-range__toggle dual-range__toggle--max" tabindex="0"></div>
               </div>
             </div>
           </fieldset>
