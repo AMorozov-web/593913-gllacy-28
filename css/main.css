@@ -1184,13 +1184,13 @@ p.subscribe__promise {
   width: 32px;
   height: 32px;
   font-size: 0;
-  border: 2px solid var(--subscribe-border);
-  border-radius: 50%;
 }
 
 .social-list__item-icon {
   fill: var(--basic-white);
   fill-opacity: .8;
+  border: 2px solid var(--subscribe-border);
+  border-radius: 50%;
 }
 
 .social-list__item-link--fb:focus,
@@ -1211,7 +1211,7 @@ p.subscribe__promise {
   fill-opacity: 1;
 }
 
-.social-list__item-link:active {
+.social-list__item-link:active > .social-list__item-icon {
   border: 2px solid var(--social-active);
 }
 
