@@ -1218,12 +1218,10 @@ p.subscribe__promise {
 
 .site-footer__inform {
   justify-self: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  max-width: 550px;
-  height: 50px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 360px;
 }
 
 .site-footer__inform-item {
