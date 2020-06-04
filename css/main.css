@@ -1151,8 +1151,8 @@ p.subscribe__promise {
 }
 
 .site-footer__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   width: 1148px;
   min-height: 103px;
@@ -1216,6 +1216,7 @@ p.subscribe__promise {
 }
 
 .site-footer__inform {
+  justify-self: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1262,6 +1263,10 @@ p.subscribe__promise {
 .inform-link--important:hover::before,
 .inform-link--important:focus::before {
   background-image: url(../img/heart_icon-hover.svg);
+}
+
+.site-footer__copyright {
+  justify-self: end;
 }
 
 .site-footer__copyright--descr {
