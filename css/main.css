@@ -339,6 +339,7 @@ a {
 .user-menu__shedule a:hover,
 .user-menu__shedule a:focus {
   color: var(--bg-link-hover);
+  border-bottom: 1px solid var(--bg-link-hover);
 }
 
 .site-breakrumbs a {
