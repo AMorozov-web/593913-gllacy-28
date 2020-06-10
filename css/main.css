@@ -393,7 +393,7 @@ a {
 .user-menu__basket--filled {
   position: relative;
   display: inline-block;
-  padding-top: 8px;
+  padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 45px;
   padding-right: 15px;
@@ -463,7 +463,6 @@ a {
   top: 50px;
   left: -145px;
   z-index: 2;
-  box-sizing: border-box;
   width: 277px;
   min-height: 214px;
   padding-top: 20px;
@@ -479,6 +478,8 @@ a {
   height: 44px;
   margin-bottom: 20px;
 }
+
++
 
 .user-menu__shedule {
   position: absolute;
