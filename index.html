@@ -69,7 +69,7 @@
                 </a>
               </li>
             </ul>
-            <form class="login-menu__login-form " action="http://echo.htmlacademy.ru" method="post">
+            <form class="modal login-menu__login-form visually-hidden" action="http://echo.htmlacademy.ru" method="post">
               <p>
                 <label class="visually-hidden" for="user-login-field">Введите Ваш E-email</label>
                 <input class="login-form__input user-input" type="email" name="user-login" id="user-login-field" placeholder="email@example.com">
@@ -78,9 +78,13 @@
                 <label class="visually-hidden" for="user-password-field">Введите Ваш пароль</label>
                 <input class="login-form__input user-input" type="password" name="user-password" id="user-password-field" placeholder="**********">
               </p>
-              <button class="button" type="submit">Войти</button>
-              <a href="dev.html">Забыли пароль?</a>
-              <a href="dev.html">Новая регистрация</a>
+              <div class="login-form__wrapper">
+                <button class="button login-form__button" type="submit">Войти</button>
+                <div class="login-form__links-wrapper">
+                  <a class="login-form__link" href="dev.html">Забыли пароль?</a>
+                  <a class="login-form__link" href="dev.html">Новая регистрация</a>
+                </div>
+              </div>
             </form>
 
             <a class="user-menu__item user-menu__basket--empty" href="dev.html" aria-label="Корзина">Пусто</a>
