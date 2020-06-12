@@ -537,20 +537,33 @@ a {
 }
 
 .user-menu__basket-modal td {
-  box-sizing: border-box;
+  box-sizing: content-box;
   margin: -1px;
   padding: 0;
   border: 1px solid red;
 }
 
+.basket-modal__button--del {
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  background-color: var(--bgcolor-popup);
+  background-image: url(../img/cross_min.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: none;
+}
+
 .user-menu__basket-modal td:first-of-type {
   width: 11px;
-  
+  padding-right: 9px;
 }
 
 .user-menu__basket-modal td:nth-of-type(2) {
   width: 33px;
-  
+  padding-right: 13px;
 }
 
 .user-menu__basket-modal td:nth-of-type(3) {
@@ -560,7 +573,7 @@ a {
 
 .user-menu__basket-modal td:nth-of-type(4) {
   width: 95px;
-  
+  padding-right: 26px;
 }
 
 .user-menu__shedule {
