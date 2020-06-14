@@ -28,9 +28,9 @@
     --bg-list-hover: #FBDED7;
     --bg-list-active: #F6B5A5;
     --bg-scale: rgba(248, 247, 244, 0.5);
-    --bgcolor-slide1: #849D8F;
-    --bgcolor-slide2: #8996A6;
-    --bgcolor-slide3: #9D8B84;
+    --bg-slide1: #849D8F;
+    --bg-slide2: #8996A6;
+    --bg-slide3: #9D8B84;
     --bgcolor-popup: #F8F7F4;
     --bgcolor-contacts: #FEFEFE;
     --btn: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -112,10 +112,11 @@ a {
       min-content;
   align-content: start;
   min-height: 100%;
-  background-color: var(--bgcolor-slide1);
+  background-color: var(--bg-slide1);
   background-image: url(../img/promo_slider_1.png);
   background-position: top center;
   background-repeat: no-repeat;
+  transition: background-color 0.9s ease-in-out;
 }
 
 .catalog-page {
@@ -126,7 +127,7 @@ a {
       min-content;
   align-content: start;
   min-height: 100%;
-  background-color: var(--bgcolor-slide1);
+  background-color: var(--bg-slide1);
 }
 
 /* Site navigation */
