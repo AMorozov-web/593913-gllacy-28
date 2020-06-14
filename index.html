@@ -323,26 +323,6 @@
           </p>
           <a class="button contacts__button" href="feedback.html">Форма обратной связи</a>
         </div>
-        <div class="visually-hidden">
-          <p>Мы обязательно вам ответим!</p>
-          <button type="button">Закрыть форму</button>
-          <form action="http://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="feedback-form__user-name-field">Имя и Фамилия</label>
-              <input type="text" name="user-name" id="feedback-form__user-name-field" placeholder="Имя Фамилия">
-            </p>
-            <p>
-              <label class="visually-hidden" for="feedback-form__user-email-field">Ваш e-mail</label>
-              <input type="email" name="user-mail" id="feedback-form__user-email-field" placeholder="email@example.com">
-            </p>
-            <p>
-              <label class="visually-hidden" for="feedback-form__user-comment-field">Ваши вопросы и пожелания</label>
-              <input type="text" name="user-comment" id="feedback-form__user-comment-field"
-                placeholder="В свободной форме">
-            </p>
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
       </section>
     </main>
 
@@ -427,6 +407,32 @@
         </div>
       </div>
     </footer>
+
+    
+      <div class="overlay visually-hidden">
+        <div class="modal contacts__feedback">
+          <p class="feedback__title">Мы обязательно вам ответим!</p>
+          <button class="feedback__button--close" type="button" aria-label="Закрыть форму"></button>
+          <form class="feedback__form" action="http://echo.htmlacademy.ru" method="post">
+            <p>
+              <label class="visually-hidden" for="form__user-name-field">Имя и Фамилия</label>
+              <input class="user-input form__user-name-field" type="text" name="user-name" id="form__user-name-field" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label class="visually-hidden" for="form__user-email-field">Ваш e-mail</label>
+              <input class="user-input form__user-email-field" type="email" name="user-mail" id="form__user-email-field" placeholder="email@example.com">
+            </p>
+            <p>
+              <span class="visually-hidden">Ваши вопросы и пожелания</span>
+              <textarea class="user-input form__user-comment-field" name="user-comment" id="form__user-comment-field"
+                placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    
+
   <script src="js/script.js"></script>
 </body>
 
