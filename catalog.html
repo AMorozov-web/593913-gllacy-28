@@ -61,17 +61,21 @@
       
       	  <div class="site-nav__user-menu-wrapper">
 
-      	    <a class="user-menu__item user-menu__search-link" href="search.html" aria-label="Поиск">
-              <svg class="search-icon" width="32" height="32"  xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 22.665l-4.922-4.932a6.144 6.144 0 00-.993-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L22.659 24 24 22.665zm-9.918-4.288a4.244 4.244 0 01-3.928-2.63 4.27 4.27 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.275 4.275 0 01-1.248 3.01 4.255 4.255 0 01-3.002 1.25z"
-                />
-              </svg>
-            </a>
-            <form class="modal user-menu__search-field visually-hidden" action="http://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search-field">Введите Ваш запрос</label>
-              <input class="search-field__input user-input" type="text" id="search-field" name="search-field" placeholder="Что ищем?">
-            </form>
+      	    <ul class="user-menu__search-form user-menu__item">
+              <li class="search-form__item">
+                <a class="search-form__search-link" href="search.html" aria-label="Поиск">
+                  <svg class="search-icon" width="32" height="32"  xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24 22.665l-4.922-4.932a6.144 6.144 0 00-.993-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293 8.328 6.11 6.11 0 008.262.937L22.659 24 24 22.665zm-9.918-4.288a4.244 4.244 0 01-3.928-2.63 4.27 4.27 0 01.922-4.643 4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.275 4.275 0 01-1.248 3.01 4.255 4.255 0 01-3.002 1.25z"
+                    />
+                  </svg>
+                </a>
+                <form class="modal search-form__search-field" action="http://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="search-field">Введите Ваш запрос</label>
+                  <input class="search-field__input user-input" type="text" id="search-field" name="search-field" placeholder="Что ищем?">
+                </form>
+              </li>
+            </ul>
         
       	    <ul class="user-menu__item user-menu__login-menu">
               <li class="login-menu__item">
@@ -80,68 +84,71 @@
                     Вход
                   </p>
                 </a>
+                <form class="modal login-menu__login-form" action="http://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="user-login-field">Введите Ваш E-email</label>
+                    <input class="login-form__input user-input" type="email" name="user-login" id="user-login-field" placeholder="email@example.com">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="user-password-field">Введите Ваш пароль</label>
+                    <input class="login-form__input user-input" type="password" name="user-password" id="user-password-field" placeholder="**********">
+                  </p>
+                  <div class="login-form__wrapper">
+                    <button class="button login-form__button" type="submit">Войти</button>
+                    <div class="login-form__links-wrapper">
+                      <a class="login-form__link" href="dev.html">Забыли пароль?</a>
+                      <a class="login-form__link" href="dev.html">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
               </li>
             </ul>
-            <form class="modal login-menu__login-form visually-hidden" action="http://echo.htmlacademy.ru" method="post">
-              <p>
-                <label class="visually-hidden" for="user-login-field">Введите Ваш E-email</label>
-                <input class="login-form__input user-input" type="email" name="user-login" id="user-login-field" placeholder="email@example.com">
-              </p>
-              <p>
-                <label class="visually-hidden" for="user-password-field">Введите Ваш пароль</label>
-                <input class="login-form__input user-input" type="password" name="user-password" id="user-password-field" placeholder="**********">
-              </p>
-              <div class="login-form__wrapper">
-                <button class="button login-form__button" type="submit">Войти</button>
-                <div class="login-form__links-wrapper">
-                  <a class="login-form__link" href="dev.html">Забыли пароль?</a>
-                  <a class="login-form__link" href="dev.html">Новая регистрация</a>
-                </div>
-              </div>
-            </form>
+            
         
-      	    <a class="user-menu__item user-menu__basket--filled" href="dev.html" aria-label="Корзина">2 товара</a>
-      	    <div class="modal user-menu__basket-modal visually-hidden">
-      	      <table>
-                <caption class="visually-hidden">
-                  Товары в корзине:
-                </caption>
-      	        <tbody>
-      	          <tr>
-      	            <td>
-      	              <button class="basket-modal__button--del" type="button" aria-label="Удалить товар"></button>
-      	            </td>
-      	            <td>
-      	              <img src="img/icecream_1_min.png" width="33" height="33" alt="" />
-      	            </td>
-      	            <td class="basket-modal__link-cell">
-      	              <a class="basket-modal__item-link" href="dev.html">Пломбир с апельсиновым джемом</a>
-      	            </td>
-      	            <td>1,5 кг х <span>200 руб.</span></td>
-      	            <td>
-      	              300 руб.
-      	            </td>
-      	          </tr>
-      	          <tr>
-      	            <td>
-      	              <button class="basket-modal__button--del" type="button" aria-label="Удалить товар"></button>
-      	            </td>
-      	            <td>
-      	              <img src="img/icecream_3_min.png" width="33" height="33" alt="" />
-      	            </td>
-      	            <td class="basket-modal__link-cell">
-      	              <a class="basket-modal__item-link" href="dev.html">Клубничный пломбир с присыпкой из белого шоколада</a>
-      	            </td>
-      	            <td>1,5 кг х <span>300 руб.</span></td>
-      	            <td>
-      	              450 руб.
-      	            </td>
-      	          </tr>
-      	        </tbody>
-      	      </table>
-      	      <p class="basket-modal__final-price">Итого: 750 руб.</p>
-      	      <a class="button basket-modal__button--buy" href="dev.html">Оформить заказ</a>
-      	    </div>
+      	    <div class="user-menu__basket-wrapper user-menu__item">
+              <a class="user-menu__basket--filled" href="dev.html" aria-label="Корзина">2 товара</a>
+              <div class="modal user-menu__basket-modal ">
+                <table>
+                  <caption class="visually-hidden">
+                    Товары в корзине:
+                  </caption>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <button class="basket-modal__button--del" type="button" aria-label="Удалить товар"></button>
+                      </td>
+                      <td>
+                        <img src="img/icecream_1_min.png" width="33" height="33" alt="" />
+                      </td>
+                      <td class="basket-modal__link-cell">
+                        <a class="basket-modal__item-link" href="dev.html">Пломбир с апельсиновым джемом</a>
+                      </td>
+                      <td>1,5 кг х <span>200 руб.</span></td>
+                      <td>
+                        300 руб.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="basket-modal__button--del" type="button" aria-label="Удалить товар"></button>
+                      </td>
+                      <td>
+                        <img src="img/icecream_3_min.png" width="33" height="33" alt="" />
+                      </td>
+                      <td class="basket-modal__link-cell">
+                        <a class="basket-modal__item-link" href="dev.html">Клубничный пломбир с присыпкой из белого шоколада</a>
+                      </td>
+                      <td>1,5 кг х <span>300 руб.</span></td>
+                      <td>
+                        450 руб.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="basket-modal__final-price">Итого: 750 руб.</p>
+                <a class="button basket-modal__button--buy" href="dev.html">Оформить заказ</a>
+              </div>
+            </div>
         
       	    <div class="user-menu__item user-menu__shedule">
       	      <p>с 10 до 20, ежедневно</p>

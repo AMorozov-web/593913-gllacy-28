@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         slide.classList.add('visually-hidden');
                     }
                 }
-                
                 currentSlide.classList.remove('visually-hidden');
 
                 for (let title of titles) {
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         title.classList.remove('current-slide');
                     }
                 }
-
                 currentTitle.classList.add('current-slide');
 
                 for (let link of links) {
@@ -38,13 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         link.classList.remove('current-slide');
                     }
                 }
-
                 currentLink.classList.add('current-slide');
 
                 for ( let sliderButton of sliderButtons) {
                     sliderButton.classList.remove('active');
                 }
-
                 this.classList.add('active');
             }
         }

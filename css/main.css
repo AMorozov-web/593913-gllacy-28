@@ -421,7 +421,7 @@ a {
   display: inline-block;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 45px;
+  padding-left: 43px;
   padding-right: 15px;
   font-size: 14px;
   line-height: 16px;
@@ -464,14 +464,14 @@ a {
   background-image: url(../img/login_icon.svg);
 }
 
-.login-menu__login-link:hover,
+.login-menu__item:hover .login-menu__login-link,
 .login-menu__login-link:focus {
   outline: none;
   color: var(--basic-dark);
   background-color: var(--basic-white);
 }
 
-.login-menu__login-link:hover .login-menu__link-descr::before,
+.login-menu__item:hover .login-menu__link-descr::before,
 .login-menu__login-link:focus .login-menu__link-descr::before {
   background-image: url(../img/login_icon_hovered.svg);
 }
@@ -487,12 +487,22 @@ a {
 .login-menu__login-form {
   position: absolute;
   top: 50px;
-  left: -145px;
+  left: -105px;
   z-index: 2;
   width: 277px;
   min-height: 214px;
   padding-top: 20px;
   padding-left: 19px;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.login-menu__item:hover > .login-menu__login-form {
+  transform: scaleY(1);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .login-menu__login-form p {
@@ -500,6 +510,7 @@ a {
 }
 
 .login-form__input {
+  box-sizing: border-box;
   width: 241px;
   height: 44px;
   margin-bottom: 20px;
@@ -544,23 +555,33 @@ a {
 .user-menu__basket-modal {
   position: absolute;
   top: 50px;
-  right: 0;
+  right: -15px;
   z-index: 2;
   width: 539px;
   min-height: 242px;
-  padding-top: 22px;
+  padding-top: 20px;
   padding-bottom: 21px;
   padding-right: 30px;
   text-align: right;
   color: var(--basic-dark);
   font-size: 13px;
   line-height: 16px;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.user-menu__basket-wrapper:hover > .user-menu__basket-modal {
+  transform: scaleY(1);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
 }
 
 .user-menu__basket-modal table {
   width: 100%;
   padding: 0;
-  padding-left: 5px;
+  padding-left: 3px;
   text-align: left;
   border-bottom: 1px solid var(--table-border); 
 }
@@ -568,7 +589,7 @@ a {
 .user-menu__basket-modal td {
   box-sizing: content-box;
   padding-top: 7px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 .user-menu__basket-modal tr {
@@ -1113,7 +1134,7 @@ a {
 .fillers__input + .fillers__label::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   display: inline-block;
   width: 24px;
