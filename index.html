@@ -107,35 +107,35 @@
           </h2>
           <ul class="promo-slider__slider-list">
             <li class="slider-list__item">
-              <h3 class="slider-list__item-title">
+              <h3 class="slider-item__title">
                 Крем-брюле и пломбир с малиновым джемом
               </h3>
-              <p class="visually-hidden">
-                Два аппетитных вафельных рожка - с мороженым крем-брюле, и с пломбиром с малиновым джемом
+              <p class="slider-item__description visually-hidden">
+                Два аппетитных вафельных рожка - с мороженым крем-брюле, и с пломбиром, перемешанным с малиновым джемом
               </p>
-              <a class="button slider-list__item-link" href="dev.html">
+              <a class="button slider-item__link" href="dev.html">
                 Давайте оба!
               </a>
             </li>
             <li class="slider-list__item visually-hidden">
-              <h3 class="slider-list__item-title">
+              <h3 class="slider-item__title">
                 Шоколадный пломбир и лимонный сорбет
               </h3>
-              <p class="visually-hidden">
+              <p class="slider-item__description visually-hidden">
                 Два аппетитных вафельных рожка - с шоколадным мороженым с кусочками шоколада, и с лимонным сорбетом с кусочками клубники
               </p>
-              <a class="button slider-list__item-link" href="dev.html">
+              <a class="button slider-item__link" href="dev.html">
                 Давайте оба!
               </a>
             </li>
             <li class="slider-list__item visually-hidden">
-              <h3 class="slider-list__item-title">
+              <h3 class="slider-item__title">
                 Пломбир с помадкой<br>и клубничный щербет
               </h3>
-              <p class="visually-hidden">
+              <p class="slider-item__description visually-hidden">
                 Два аппетитных вафельных рожка - c нежным пломбиром, политым темным шоколадом, и с нежным клубничным щербетом
               </p>
-              <a class="button slider-list__item-link" href="dev.html">
+              <a class="button slider-item__link" href="dev.html">
                 Давайте оба!
               </a>
             </li>
@@ -408,19 +408,17 @@
       </div>
     </footer>
 
-    
       <div class="overlay visually-hidden">
         <div class="modal contacts__feedback">
           <p class="feedback__title">Мы обязательно вам ответим!</p>
-          <button class="feedback__button--close" type="button" aria-label="Закрыть форму"></button>
           <form class="feedback__form" action="http://echo.htmlacademy.ru" method="post">
             <p>
               <label class="visually-hidden" for="form__user-name-field">Имя и Фамилия</label>
-              <input class="user-input form__user-name-field" type="text" name="user-name" id="form__user-name-field" placeholder="Имя Фамилия">
+              <input class="user-input form__user-name-field" type="text" name="user-name" id="form__user-name-field" placeholder="Имя Фамилия" value="">
             </p>
             <p>
               <label class="visually-hidden" for="form__user-email-field">Ваш e-mail</label>
-              <input class="user-input form__user-email-field" type="email" name="user-mail" id="form__user-email-field" placeholder="email@example.com">
+              <input class="user-input form__user-email-field" type="email" name="user-mail" id="form__user-email-field" placeholder="email@example.com" value="">
             </p>
             <p>
               <span class="visually-hidden">Ваши вопросы и пожелания</span>
@@ -429,10 +427,10 @@
             </p>
             <button class="button form__button" type="submit">Отправить</button>
           </form>
+          <button class="feedback__button-close" type="button" aria-label="Закрыть форму"></button>
         </div>
       </div>
     
-
   <script src="js/script.js"></script>
 </body>
 
