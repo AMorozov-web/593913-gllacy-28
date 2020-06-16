@@ -113,7 +113,7 @@ a {
   align-content: start;
   min-height: 100%;
   background-color: var(--bg-slide1);
-  background-image: url(/img/promo_slider_1.png);
+  background-image: url(../img/promo_slider_1.png);
   background-position: top center;
   background-repeat: no-repeat;
   transition: background-color 0.9s ease;
