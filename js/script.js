@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
 
         overlay.addEventListener ("click", function () {
-            if (!overlay.classList.contains('visually-hidden') && mouseLeaveForm == false) {
+            if (!overlay.classList.contains('visually-hidden') && ifMouseLeaveForm == false) {
               modalClose();
             }
           
