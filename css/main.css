@@ -486,7 +486,7 @@ a {
 
 .login-menu__login-form {
   position: absolute;
-  top: 50px;
+  top: 49px;
   left: -105px;
   z-index: 2;
   width: 277px;
