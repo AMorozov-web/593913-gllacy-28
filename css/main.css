@@ -1735,7 +1735,7 @@ a {
 /* Footer */
 
 .catalog-page .site-footer__wrapper {
-  border-top: 1px solid var(--bgcolor-basic);
+  border-top: 1px solid var(--bg-basic);
 }
 
 .site-footer__wrapper {
@@ -1824,7 +1824,7 @@ a {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-white);
-  border-bottom: 1px solid var(--bgcolor-basic);
+  border-bottom: 1px solid var(--bg-basic);
 }
 
 .site-footer__inform-link:hover,
