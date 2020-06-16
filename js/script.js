@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 indexPage.style.backgroundColor = 'var(--bg-slide' + (buttonIndex + 1) + ')';
 
-                indexPage.style.backgroundImage = 'url(../img/promo_slider_' + (buttonIndex + 1) + '.png)';
+                indexPage.style.backgroundImage = 'url(img/promo_slider_' + (buttonIndex + 1) + '.png)';
 
                 for (let slide of slides) {
                     if (!slide.classList.contains('visually-hidden')) {
