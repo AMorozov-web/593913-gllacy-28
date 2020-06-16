@@ -212,5 +212,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
          
     }
-       
+
+    if (document.querySelector(".search-form__search-field")) {
+        let searchForm = document.querySelector(".search-form__search-field");
+        let searchInput = document.getElementById("search-field");
+
+        searchForm.addEventListener("mouseenter", function () {
+            searchInput.focus();
+        })
+
+    }
+
+
 });
