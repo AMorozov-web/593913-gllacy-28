@@ -116,8 +116,8 @@ a {
   background-image: url(../img/promo_slider_1.png);
   background-position: top center;
   background-repeat: no-repeat;
-  transition: background-color 0.9s ease-in-out;
-  transition: background-image 0.7s ease-in-out;
+  transition: background-color 0.9s ease;
+  transition: background-image 0.7s ease;
 }
 
 .catalog-page {
@@ -550,6 +550,13 @@ a {
 
 .login-form__link:last-child {
   margin-bottom: 0;
+}
+
+.login-form__link:hover,
+.login-form__link:focus {
+  outline: none;
+  color: var(--bg-link-hover);
+  text-decoration-color: var(--bg-link-hover);
 }
 
 .user-menu__basket-modal {
@@ -1707,10 +1714,16 @@ a {
   border-radius: 70px;
 }
 
-.input-error {
+.input-error-animate {
   -webkit-animation-name: shakeY;
   animation-name: shakeY;
   animation-duration: 700ms;
+}
+
+.input-error-backlight {
+  -moz-box-shadow:1px 1px 9px 8px rgba(237,80,80,0.55);
+  -webkit-box-shadow:1px 1px 9px 8px rgba(237,80,80,0.55);
+  box-shadow:1px 1px 9px 8px rgba(237,80,80,0.55);
 }
 
 .popup {

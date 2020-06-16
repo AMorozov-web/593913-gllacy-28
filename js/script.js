@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     if (document.querySelector(".promo-slider")) {
         let sliderButtons = document.querySelectorAll(".buttons-list__button");
         for ( sliderButton of sliderButtons ) {
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let emailField = document.getElementById("form__user-email-field");
         let textField = document.getElementById("form__user-comment-field");
         let buttonSubmit = document.querySelector('.form__button');
-        let mouseLeaveForm = false;
+        let ifMouseLeaveForm = false;
 
         function modalOpen() {
           if (overlay.classList.contains('visually-hidden')) {
@@ -72,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
         function modalClose() {
             overlay.classList.add('visually-hidden');
             feedbackForm.classList.remove('popup');
-            nameField.classList.remove('input-error');
-            emailField.classList.remove('input-error');
-            textField.classList.remove('input-error');
+            nameField.classList.remove('input-error-animate');
+            emailField.classList.remove('input-error-animate');
+            textField.classList.remove('input-error-animate');
         }
     
         buttonOpen.addEventListener ("click", function (evt) {
@@ -86,23 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
          if (!nameField.value) {
             evt.preventDefault();
-            nameField.classList.remove('input-error');
+            nameField.classList.remove('input-error-animate');
             overlay.offsetWidth = overlay.offsetWidth;
-            nameField.classList.add('input-error');
-         } 
-
-         if (!emailField.value) {
+            nameField.classList.add('input-error-animate');
+            nameField.classList.add('input-error-backlight');
+            setTimeout(() => {
+                nameField.classList.remove('input-error-backlight'); 
+            }, 700);
+         } else if (!emailField.value) {
             evt.preventDefault();
-            emailField.classList.remove('input-error');
+            emailField.classList.remove('input-error-animate');
             overlay.offsetWidth = overlay.offsetWidth;
-            emailField.classList.add('input-error');
-         } 
-
-         if (!textField.value) {
+            emailField.classList.add('input-error-animate');
+            emailField.classList.add('input-error-backlight');
+            setTimeout(() => {
+                emailField.classList.remove('input-error-backlight'); 
+            }, 700);
+         } else if (!textField.value) {
             evt.preventDefault();
-            textField.classList.remove('input-error');
+            textField.classList.remove('input-error-animate');
             overlay.offsetWidth = overlay.offsetWidth;
-            textField.classList.add('input-error');
+            textField.classList.add('input-error-animate');
+            textField.classList.add('input-error-backlight');
+            setTimeout(() => {
+                textField.classList.remove('input-error-backlight'); 
+            }, 700);
          } 
 
         })
@@ -111,12 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
             modalClose();
         })
 
-        feedbackForm.addEventListener ("mouseleave", function (evt) {
-          mouseLeaveForm = false;
+        feedbackForm.addEventListener ("mouseleave", function () {
+            ifMouseLeaveForm = false;
         })
 
-        feedbackForm.addEventListener ("mouseenter", function (evt) {
-          mouseLeaveForm = true;
+        feedbackForm.addEventListener ("mouseenter", function () {
+            ifMouseLeaveForm = true;
         })
 
         overlay.addEventListener ("click", function () {
@@ -134,6 +143,74 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           }
         });
-    }   
+    }
+    
+    if (document.querySelector(".subscribe")) {
+        let subscribeEmailField = document.getElementById("subscribe-field");
+        let subscribeSubmitButton = document.querySelector(".subscribe__button");
+        subscribeSubmitButton.addEventListener("click", function (evt) {
+            if (!subscribeEmailField.value) {
+                evt.preventDefault();
+                subscribeEmailField.classList.remove('input-error-animate');
+                subscribeEmailField.offsetWidth = subscribeEmailField.offsetWidth;
+                subscribeEmailField.classList.add('input-error-animate');
+                subscribeEmailField.classList.add('input-error-backlight');
+                setTimeout(() => {
+                    subscribeEmailField.classList.remove('input-error-backlight'); 
+                }, 700);
+             }
+        })
+    }
+
+    if (document.querySelector(".login-menu__login-form")) {
+        let loginForm = document.querySelector(".login-menu__item");
+        let loginInput = document.getElementById("user-login-field");
+        let passwordInput = document.getElementById("user-password-field");
+        let loginFormButton = document.querySelector(".login-form__button");
+        let isStorageSupport = true;
+        let storage = "";
+
+        try {
+            storage = localStorage.getItem("login");
+          } catch (err) {
+            isStorageSupport = false;
+          }
+
+        loginForm.addEventListener("mouseenter", function () {
+            loginInput.value = "";
+            passwordInput.value = "";
+            if (storage) {
+                loginInput.value = storage;
+                passwordInput.focus();
+            } else {
+                loginInput.focus();
+            }
+        })
+
+        loginFormButton.addEventListener("click", function (evt) {
+
+            if (!loginInput.value) {
+                evt.preventDefault();
+                loginInput.classList.remove('input-error-animate');
+                loginForm.offsetWidth = loginForm.offsetWidth;
+                loginInput.classList.add('input-error-animate');
+                loginInput.classList.add('input-error-backlight');
+                setTimeout(() => {
+                    loginInput.classList.remove('input-error-backlight'); 
+                }, 700);
+             } else if (!passwordInput.value) {
+                evt.preventDefault();
+                passwordInput.classList.remove('input-error-animate');
+                loginForm.offsetWidth = loginForm.offsetWidth;
+                passwordInput.classList.add('input-error-animate');
+                passwordInput.classList.add('input-error-backlight');
+                setTimeout(() => {
+                    passwordInput.classList.remove('input-error-backlight'); 
+                }, 700);
+            
+            }
+        })
+         
+    }
        
 });
