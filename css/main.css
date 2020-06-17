@@ -23,6 +23,7 @@
     --placeholder: #999999;
     --subscribe-border: rgba(255, 255, 255, 0.5);
     --bg-link-hover: #FFBC9E;
+    --white-link-hover: #E84D37;
     --bg-link-active: #EDEDED;
     --bg-link-current: #D07058;
     --bg-list-hover: #FBDED7;
@@ -555,8 +556,8 @@ a {
 .login-form__link:hover,
 .login-form__link:focus {
   outline: none;
-  color: var(--bg-link-hover);
-  text-decoration-color: var(--bg-link-hover);
+  color: var(--white-link-hover);
+  text-decoration-color: var(--white-link-hover);
 }
 
 .user-menu__basket-modal {
@@ -1488,7 +1489,7 @@ a {
 
 .news__link:hover,
 .news__link:focus {
-  color: var(--bg-link-hover);
+  color: var(--white-link-hover);
 }
 
 /* Subscribe */
