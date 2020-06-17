@@ -1565,6 +1565,7 @@ a {
 .contacts {
   position: relative;
   width: 1200px;
+  min-height: 430px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -1573,6 +1574,7 @@ a {
   position: absolute;
   top: 62px;
   right: 27px;
+  z-index: 1;
   box-sizing: border-box;
   width: 303px;
   min-height: 306px;
@@ -1585,6 +1587,12 @@ a {
   color: var(--basic-dark);
   background-color: var(--bg-contacts);
   border-radius: 16px;
+}
+
+.widget-shadow {
+  -moz-box-shadow:0px 2px 14px 3px rgba(0,0,0,0.36);
+  -webkit-box-shadow:0px 2px 14px 3px rgba(0,0,0,0.36);
+  box-shadow:0px 2px 14px 3px rgba(0,0,0,0.36);
 }
 
 .contacts__adress {
