@@ -1535,11 +1535,11 @@ a {
   padding: 0;
 }
 
-.subscribe__input-field {
+.subscribe__input-wrapper {
   margin: 0;
 }
 
-.subscribe input[type=email] {
+.subscribe__input {
   box-sizing: border-box;
   width: 368px;
   height: 44px;
