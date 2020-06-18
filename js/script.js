@@ -223,5 +223,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
+    if (navigator.userAgent.search(/Firefox/) > 0) {
+        let inputs = document.querySelectorAll(".user-input");
+        for (let input of inputs) {
+            input.style.fontWeight = 'normal';
+            input.addEventListener('focusin', function (evt) {
+                this.style.fontWeight = 'bold'; 
+            });
+            input.addEventListener('focusout', function (evt) {
+                if (this.value == 0) {
+                    this.style.fontWeight = 'normal'; 
+                } 
+            });
+        }
+    };
 });

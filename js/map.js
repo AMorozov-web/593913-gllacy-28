@@ -1,8 +1,8 @@
 window.onload = function() {
     let mapLink = document.querySelector(".contacts__map");
     let contactsWidget = document.querySelector(".contacts__contact-widget");
-    var gllacyMap;
-    var gllacyPlaceMark;
+    let gllacyMap;
+    let gllacyPlaceMark;
 
     ymaps.ready({
         successCallback: function () {
