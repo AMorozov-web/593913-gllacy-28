@@ -163,12 +163,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (document.querySelector(".login-menu__login-form")) {
+        let enterButton = document.querySelector(".login-menu__login-link");
         let loginForm = document.querySelector(".login-menu__item");
         let loginInput = document.getElementById("user-login-field");
         let passwordInput = document.getElementById("user-password-field");
         let loginFormButton = document.querySelector(".login-form__button");
         let isStorageSupport = true;
         let storage = "";
+
+        enterButton.onclick = function (evt) {
+            evt.preventDefault();
+        }
 
         try {
             storage = localStorage.getItem("login");
@@ -222,19 +227,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
 
     }
-
-    if (navigator.userAgent.search(/Firefox/) > 0) {
-        let inputs = document.querySelectorAll(".user-input");
-        for (let input of inputs) {
-            input.style.fontWeight = 'normal';
-            input.addEventListener('focusin', function (evt) {
-                this.style.fontWeight = 'bold'; 
-            });
-            input.addEventListener('focusout', function (evt) {
-                if (this.value == 0) {
-                    this.style.fontWeight = 'normal'; 
-                } 
-            });
-        }
-    };
 });
