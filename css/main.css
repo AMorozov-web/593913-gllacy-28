@@ -344,7 +344,6 @@ a {
 
 .user-input {
   display: block;
-  box-sizing: content-box;
   padding: 0;
   padding-left: 15px;
   font-size: 16px;
@@ -1606,7 +1605,7 @@ a {
   box-sizing: border-box;
   width: 368px;
   height: 44px;
-  padding: 14px;
+  line-height: 42px;
   background: var(--basic-white);
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
