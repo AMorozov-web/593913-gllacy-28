@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     if (document.querySelector(".promo-slider")) {
-        let sliderButtons = document.querySelectorAll(".buttons-list__button");
-        for ( sliderButton of sliderButtons ) {
+        let buttons = document.querySelectorAll(".buttons-list__button");
+        for ( let sliderButton of buttons ) {
             sliderButton.onclick = function () {
 
-                let buttonIndex = Array.prototype.indexOf.call(sliderButtons, this);
+                let buttonIndex = Array.prototype.indexOf.call(buttons, this);
                 let indexPage = document.querySelector(".index-page");
                 let slides = document.querySelectorAll('.slider-list__item');
                 let titles = document.querySelectorAll('.slider-item__title');
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 currentLink.classList.add('current-slide');
 
-                for ( let sliderButton of sliderButtons) {
+                for ( let sliderButton of buttons) {
                     sliderButton.classList.remove('active');
                 }
                 this.classList.add('active');
