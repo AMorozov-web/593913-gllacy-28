@@ -34,7 +34,7 @@ window.onload = function() {
     
                 iconImageSize: [80, 140],
     
-                iconImageOffset: [-35, -170]
+                iconImageOffset: [-34, -168]
     
             });
     
