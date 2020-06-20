@@ -1241,6 +1241,7 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--bg-basic);
   border: 2px solid var(--basic-white);
