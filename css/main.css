@@ -42,6 +42,7 @@
   --bg-contacts: #fefefe;
   --btn-text-shadow: rgba(160, 32, 11, 0.76);
   --btn-box-shadow: rgba(172, 16, 0, 0.64);
+  --btn-shadow-active: #942718;
   --btn-gradient: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
   --btn-gradient-hover: linear-gradient(
       0deg,
@@ -120,7 +121,7 @@ a {
 
 .button:active {
   background: var(--btn-gradient-active);
-  box-shadow: inset 0px 2px 2px #942718;
+  box-shadow: inset 0px 2px 2px var(--btn-shadow-active);
 }
 
 .index-page {
@@ -685,14 +686,12 @@ a {
 }
 
 .user-menu__basket-modal td:first-of-type {
-  align-self: top;
   width: 11px;
   padding-top: 10px;
   padding-right: 9px;
 }
 
 .user-menu__basket-modal td:nth-of-type(2) {
-  align-self: top;
   width: 33px;
   padding-top: 0;
   padding-right: 13px;
@@ -701,7 +700,6 @@ a {
 .user-menu__basket-modal td:nth-of-type(3) {
   width: 217px;
   padding-right: 30px;
-  text-align: bottom;
 }
 
 .user-menu__basket-modal td:nth-of-type(4) {
@@ -753,7 +751,7 @@ a {
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
-  color: var(--color-basic);
+  color: var(--basic-white);
 }
 
 .user-menu__shedule a:hover,
